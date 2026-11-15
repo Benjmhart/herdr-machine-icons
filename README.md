@@ -6,7 +6,7 @@ A [herdr](https://herdr.dev) plugin: every pane on a machine carries that machin
 ```toml
 # ~/.config/herdr/config.toml
 [ui.sidebar.agents]
-rows = [["state_icon", "workspace", "$machine_icon", "tab"]]
+rows = [["state_icon", "$machine_icon", "workspace", "tab"]]
 ```
 
 ## Install
