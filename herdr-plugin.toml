@@ -1,0 +1,18 @@
+id = "benjmhart.machine-icons"
+name = "Machine icons"
+version = "0.1.0"
+min_herdr_version = "0.9.3"
+description = "Each pane's machine as a short icon ($machine_icon) for herdr's sidebar rows"
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["python3", "machine_icons.py"]
+
+# Pane tokens are not restored after a restart, and new panes and agents need theirs.
+[[events]]
+on = "pane.created"
+command = ["python3", "machine_icons.py"]
+
+[[events]]
+on = "pane.agent_detected"
+command = ["python3", "machine_icons.py"]
