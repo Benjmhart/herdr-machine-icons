@@ -1,9 +1,9 @@
 id = "benjmhart.machine-icons"
 name = "Machine icons"
-version = "0.1.0"
+version = "0.2.0"
 min_herdr_version = "0.9.3"
 description = "Each pane's machine as a short icon ($machine_icon) for herdr's sidebar rows"
-platforms = ["linux", "macos"]
+platforms = ["linux", "macos", "windows"]
 
 [[startup]]
 command = ["python3", "machine_icons.py"]

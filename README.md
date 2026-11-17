@@ -23,6 +23,12 @@ on every machine herdr reaches, and give each the same icon list, one `<hostname
 
 The hostname is `uname -n` up to the first dot. A machine with no line gets no token, so its agents show none.
 
+
+### Windows
+
+Runs on herdr's Windows build (tested on Windows 11, herdr 0.9.5). Windows' own `python3` is a Microsoft Store
+stub: install Python with python.org's **Python install manager**, which answers to `python3`. The icons file is `%APPDATA%\herdr\plugins\config\benjmhart.machine-icons\icons`.
+
 ## How
 
 Each machine tags its own panes, so no machine needs to reach another: at server start and whenever a pane or an agent

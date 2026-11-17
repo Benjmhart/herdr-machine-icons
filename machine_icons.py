@@ -28,7 +28,7 @@ def main():
             mine = icon(host, f.read())
     except OSError:
         mine = None
-    out = subprocess.run([HERDR, "pane", "list"], capture_output=True, text=True, timeout=10)
+    out = subprocess.run([HERDR, "pane", "list"], capture_output=True, encoding="utf-8", timeout=10)
     if out.returncode:
         sys.exit(f"machine-icons: pane list: {out.stderr.strip()}")
     for p in json.loads(out.stdout)["result"]["panes"]:
