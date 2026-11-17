@@ -36,8 +36,10 @@ appears, `machine_icons.py` sets `machine_icon` on every pane of that server (`h
 not keep pane tokens across a restart; the startup hook puts them back. Change the list, then restart the server or open
 a pane for it to apply.
 
-Standard library Python 3 only. Linux and macOS.
+Standard library Python 3 only. Linux, macOS and Windows.
 
 ## Test
 
     python3 machine_icons.py test
+
+CI (`.github/workflows/ci.yml`) runs the tests on Linux, macOS and Windows and links the plugin into a real herdr on every push. Tag a release only from a commit whose run is green.
