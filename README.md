@@ -3,6 +3,12 @@
 A [herdr](https://herdr.dev) plugin: every pane on a machine carries that machine's icon as the pane token
 `machine_icon`, so herdr's sidebar can show which machine an agent runs on in one character instead of its name.
 
+![Agents on three machines in one herdr sidebar, each row with its machine's icon; clicking a row switches to that agent on its machine](docs/demo.gif)
+
+One herdr window with agents on devbox 🦊, laptop 💻 and buildbox 🔨, grouped by queue with
+[herdr-queues](https://github.com/Benjmhart/herdr-queues) (its label `{machine} {workspace}`); a click switches to the
+agent on its machine. (Made-up machines in a throwaway herdr.)
+
 ```toml
 # ~/.config/herdr/config.toml
 [ui.sidebar.agents]
@@ -17,9 +23,9 @@ on every machine herdr reaches, and give each the same icon list, one `<hostname
 (`#` starts a comment):
 
     # $(herdr plugin config-dir benjmhart.machine-icons)/icons
-    beast-arch 🐺
-    carbon     💎
-    micro      🐭
+    devbox   🦊
+    laptop   💻
+    buildbox 🔨
 
 The hostname is `uname -n` up to the first dot. A machine with no line gets no token, so its agents show none.
 
