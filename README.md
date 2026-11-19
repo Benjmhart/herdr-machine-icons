@@ -35,6 +35,12 @@ The hostname is `uname -n` up to the first dot. A machine with no line gets no t
 Runs on herdr's Windows build (tested on Windows 11, herdr 0.9.5). Windows' own `python3` is a Microsoft Store
 stub: install Python with python.org's **Python install manager**, which answers to `python3`. The icons file is `%APPDATA%\herdr\plugins\config\benjmhart.machine-icons\icons`.
 
+### macOS
+
+Tested on macOS 14 (Sonoma; an Intel VM, herdr 0.9.5, the Command Line Tools' `python3` 3.9.6) on 2026-11-19: the
+self-check and the token on every pane in a real herdr. A Mac's `uname -n` is its local name (`My-Mac.local`), so its
+line in the list is `My-Mac`.
+
 ## How
 
 Each machine tags its own panes, so no machine needs to reach another: at server start and whenever a pane or an agent
@@ -42,7 +48,7 @@ appears, `machine_icons.py` sets `machine_icon` on every pane of that server (`h
 not keep pane tokens across a restart; the startup hook puts them back. Change the list, then restart the server or open
 a pane for it to apply.
 
-Standard library Python 3 only. Linux, macOS and Windows.
+Standard library Python 3 only. Tested on Arch Linux, macOS 14 (Sonoma) and Windows 11.
 
 ## Test
 
