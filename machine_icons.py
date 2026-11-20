@@ -39,9 +39,9 @@ def main():
 
 if __name__ == "__main__":
     if sys.argv[1:] == ["test"]:
-        t = "# fleet\nbeast-arch 🐺\nmicro 🐭  # the laptop\n\ncarbon\n"
-        assert icon("micro", t) == "🐭" and icon("beast-arch", t) == "🐺"
-        assert icon("carbon", t) is None and icon("surfboard", t) is None
+        t = "# fleet\ndevbox 🦊\nlaptop 💻  # the travel one\n\nbuildbox\n"
+        assert icon("laptop", t) == "💻" and icon("devbox", t) == "🦊"
+        assert icon("buildbox", t) is None and icon("nas", t) is None
         print("ok")
     else:
         main()
